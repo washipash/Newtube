@@ -1,0 +1,26 @@
+.shorts-container {
+    margin-top: 20px;
+    text-align: center; /* Centrar el contenido */
+}
+
+.shorts-container h2 {
+    margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+.short {
+    display: inline-block; /* Permitir que se alineen horizontalmente */
+    width: 18%; /* Ancho del short */
+    margin: 10px; /* Margen entre los shorts */
+}
+
+.short-imagen {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantener proporciones de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.short-titulo {
+    margin-top: 5px; /* Espacio entre la imagen y el título */
+    font-size: 1em; /* Tamaño de fuente para el título */
+}
+

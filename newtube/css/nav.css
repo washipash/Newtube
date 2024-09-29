@@ -1,0 +1,226 @@
+nav {
+    position: fixed;
+    background-color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples filas si es necesario */
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+    overflow: hidden; /* Evita que el contenido se desborde fuera del contenedor */
+    position: relative; /* Asegura que la barra de navegación no se salga de la pantalla */
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo del logo y el texto "NewTube" */
+.logo {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 6px;
+}
+
+a {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Barra de búsqueda */
+.buscar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.buscar input {
+    padding: 10px;
+    height: 20px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+}
+
+.buscar .lupa, .buscar .mic {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.buscar .lupa {
+    width: 60px;
+    border-radius: 0 20px 20px 0;
+}
+
+.buscar .modo {
+    width: 120px;
+    height: 40px;
+    background-color: #eee;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 5px;
+}
+
+.noc {
+    display: flex;
+    margin-left: 50px;
+}
+
+.buscar .mic {
+    border-radius: 50%;
+    margin-left: 5px;
+    width: 40px; /* Asegura un tamaño consistente */
+    height: 40px; /* Asegura un tamaño consistente */
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+/* Cambios (botones a la derecha) */
+.cambios {
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Mantiene los botones alineados a la derecha */
+    flex-shrink: 0; /* Evita que los botones se encojan */
+    overflow: hidden; /* Evita que se desborden del contenedor */
+}
+
+.cambios button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 5px; /* Espacio entre botones */
+}
+
+.cambios img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Ocultar input de búsqueda en pantallas pequeñas */
+@media (max-width: 768px) {
+    .bar {
+        flex-wrap: nowrap;
+        height: auto; /* Asegura que la barra no se desborde */
+        overflow: hidden; /* Asegura que los elementos quepan dentro */
+    }
+
+    .buscar input {
+        display: none; /* Oculta el input de búsqueda */
+    }
+
+    .buscar {
+        flex-grow: 0;
+        margin-right: 20px;
+    }
+
+    /* Cambios en el botón lupa */
+    .buscar .lupa {
+        width: 40px;   /* Cambiar el tamaño a 40x40 */
+        height: 40px;
+        border-radius: 50%; /* Hacerlo circular */
+    }
+
+    /* Ajustes en el botón micrófono */
+    .buscar .mic {
+        width: 40px; /* Asegura que el tamaño se mantenga en 40x40 */
+        height: 40px;
+        border-radius: 50%; /* Mantén el borde redondeado */
+        flex-shrink: 0; /* Evita que se encoja */
+    }
+
+    .cambios {
+        width: auto;
+        flex-shrink: 1; /* Asegura que los botones no se desborden */
+    }
+    
+    .noc {
+        display: none !important; /* Asegura que se oculte siempre */
+    }
+}
+
+/* Para pantallas más pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .menu img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn a {
+        font-size: 16px;
+    }
+
+    /* Cambios en el botón lupa para pantallas muy pequeñas */
+    .buscar .lupa {
+        width: 40px;   /* Asegura que el tamaño se mantenga en 40x40 */
+        height: 40px;
+        border-radius: 50%; /* Mantén el borde redondeado */
+    }
+
+    /* Ajustes en el micrófono para pantallas muy pequeñas */
+    .buscar .mic {
+        width: 40px; /* Mantén el tamaño consistente */
+        height: 40px;
+        border-radius: 50%; /* Asegura que siga siendo redondeado */
+    }
+
+    /* Asegurar que la barra de navegación no se salga hacia arriba */
+    .bar {
+        overflow: hidden;
+        position: relative; /* Mantén la barra dentro de la pantalla */
+        height: auto;
+    }
+}

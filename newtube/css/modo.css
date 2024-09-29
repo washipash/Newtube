@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+h1, p {
+  text-align: center;
+}
+
+/* Estilos del contenedor y el botón */
+.noc {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.modo {
+  width: 120px;
+  height: 40px;
+  background-color: #333; /* Color del fondo del botón cuando el modo nocturno no está activado */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.5s;
+}
+
+/* Pseudo-elemento del botón para crear la animación */
+.modo::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #333; /* Color del círculo cuando no está activado (blanco) */
+  border-radius: 50%;
+  left: 5px;
+  transition: transform 0.5s, background-color 0.5s; 
+}
+
+/* Modo nocturno al marcar el checkbox */
+body.dark-mode {
+  background-color: #121212; /* Fondo oscuro para el cuerpo */
+  color: white; /* Color del texto en modo oscuro */
+}
+
+body.dark-mode .modo {
+  background-color: #333; /* Color de fondo del botón en modo nocturno (oscuro) */
+}
+
+body.dark-mode .modo::before {
+  background-color: #fff; /* Color del círculo en modo nocturno (oscuro) */
+  transform: translateX(70px); /* Mover el círculo al lado derecho */
+}
+
+/* Modo nocturno para la barra de navegación */
+body.dark-mode nav {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode nav a {
+  color: white;
+}
+
+/* Modo nocturno para la barra lateral */
+body.dark-mode .lat_nav {
+  background-color: #232323;
+}
+
+body.dark-mode .lat_nav ul li a {
+  color: white;
+}
+
+body.dark-mode .lat_nav ul li a:hover {
+  background-color: #444;
+}
+s
+
+body.dark-mode .lat_nav .section-title {
+  color: #888;
+}
+
+
+/* Modo nocturno para el input de búsqueda y botones */
+body.dark-mode .buscar input {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .buscar button {
+  background-color: #444;
+  color: white;
+}
+
+
+body.dark-mode .menu  {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode .modo {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode .enlace {
+  background-color: #333; /* Fondo oscuro para el enlace en modo nocturno */
+  color: white; /* Texto claro en modo nocturno */
+}
+
+/* Si necesitas cambiar el color del texto dentro de la clase .enlace */
+body.dark-mode .enlace .titulo,
+body.dark-mode .enlace .descripcion {
+  color: white; /* Asegúrate de que el texto sea claro en modo nocturno */
+}
+
+.enlace {
+  background-color: white; /* Fondo claro en modo normal */
+  color: black; /* Texto oscuro en modo normal */
+  transition: background-color 0.5s, color 0.5s; /* Transiciones suaves para modo nocturno */
+}
