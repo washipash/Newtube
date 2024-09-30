@@ -10,7 +10,7 @@ body {
 
 
 .center {
-    top: 60px; /* Espacio entre el nav y el centro */
+    top: 60px;
     position: relative;
     z-index: 0;
     display: block;
@@ -23,9 +23,9 @@ body {
 
 .fila {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    margin-bottom: 20px; /* Espacio entre filas */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-bottom: 20px; 
 }
 
 .enlace {
@@ -33,24 +33,47 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    flex: 1 0 calc(25% - 20px); /* 4 columnas en pantalla grande con márgenes */
-    margin: 10px; /* Espacio entre enlaces */
+    flex: 1 0 calc(25% - 20px); 
+    margin: 10px; 
     overflow: hidden;
     transition: transform 0.2s;
     cursor: pointer;
     display: flex;
-    flex-direction: column; /* Asegura que la imagen esté arriba y el texto abajo */
+    flex-direction: column; 
     align-items: center;
+    position: relative;
 }
 
 .titulo {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* Limitar a 2 líneas */
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal; /* Asegura que el texto se divida en múltiples líneas si es necesario */
-    max-height: 3em; /* Ajustar al tamaño adecuado para 2 líneas */
+    white-space: normal; 
+    max-height: 3em; 
+    width: 100%; 
+    cursor: pointer; 
+    position: relative; 
+}
+
+
+.titulo:hover::after {
+    content: attr(data-title); 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    width: max-content;
+    max-width: 300px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .descripcion {
@@ -85,20 +108,34 @@ body {
     flex: 1;
 }
 
-/* Ajustes para pantallas pequeñas */
+/* responsive */
 @media (max-width: 768px) {
     .center {
-        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
-        align-items: center; /* Alinea todos los elementos al centro */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .fila {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        flex-direction: column; 
+    }
+
+    .fila shorts{
+        flex-direction: column;
     }
 
     .enlace {
-        width: 90%; /* Ocupará el 90% del ancho en pantallas pequeñas */
-        margin: 5px 0; /* Espacio vertical entre enlaces */
-        max-width: none; /* Elimina el máximo ancho en pantallas pequeñas */
+        width: 90%; 
+        margin: 5px 0; 
+        max-width: none; 
+    }
+
+    .enlace_short {
+        width: 90%; 
+        margin: 5px 0; 
+        max-width: none; 
+    }
+
+    .titulo:hover::after {
+        max-width: 90%; 
     }
 }

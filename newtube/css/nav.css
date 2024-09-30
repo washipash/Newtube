@@ -17,12 +17,12 @@ nav {
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples filas si es necesario */
+    flex-wrap: wrap; 
     padding: 10px;
     transition: background-color 0.3s ease;
-    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
-    overflow: hidden; /* Evita que el contenido se desborde fuera del contenedor */
-    position: relative; /* Asegura que la barra de navegación no se salga de la pantalla */
+    box-sizing: border-box; 
+    overflow: hidden; 
+    position: relative; 
 }
 
 .btn {
@@ -44,7 +44,7 @@ nav {
     height: 100%;
 }
 
-/* Estilo del logo y el texto "NewTube" */
+/* Estilo del logo */
 .logo {
     width: 40px;
     height: auto;
@@ -115,9 +115,9 @@ a {
 .buscar .mic {
     border-radius: 50%;
     margin-left: 5px;
-    width: 40px; /* Asegura un tamaño consistente */
-    height: 40px; /* Asegura un tamaño consistente */
-    flex-shrink: 0; /* Evita que se encoja */
+    width: 40px; 
+    height: 40px; 
+    flex-shrink: 0; 
 }
 
 /* Cambios (botones a la derecha) */
@@ -125,14 +125,14 @@ a {
     margin-right: 2%;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Mantiene los botones alineados a la derecha */
-    flex-shrink: 0; /* Evita que los botones se encojan */
-    overflow: hidden; /* Evita que se desborden del contenedor */
+    justify-content: flex-end; 
+    flex-shrink: 0; 
+    overflow: hidden; 
 }
 
 .cambios button {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +140,7 @@ a {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-left: 5px; /* Espacio entre botones */
+    margin-left: 5px; 
 }
 
 .cambios img {
@@ -150,16 +150,29 @@ a {
     border-radius: 50%;
 }
 
-/* Ocultar input de búsqueda en pantallas pequeñas */
+button img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px; 
+    height: 24px;
+}
+
+button {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+}
+
+/* responsive */
 @media (max-width: 768px) {
     .bar {
         flex-wrap: nowrap;
-        height: auto; /* Asegura que la barra no se desborde */
-        overflow: hidden; /* Asegura que los elementos quepan dentro */
+        height: auto; 
+        overflow: hidden; 
     }
 
     .buscar input {
-        display: none; /* Oculta el input de búsqueda */
+        display: none; 
     }
 
     .buscar {
@@ -167,32 +180,32 @@ a {
         margin-right: 20px;
     }
 
-    /* Cambios en el botón lupa */
+ 
     .buscar .lupa {
-        width: 40px;   /* Cambiar el tamaño a 40x40 */
+        width: 40px;   
         height: 40px;
-        border-radius: 50%; /* Hacerlo circular */
+        border-radius: 50%; 
     }
 
-    /* Ajustes en el botón micrófono */
+
     .buscar .mic {
-        width: 40px; /* Asegura que el tamaño se mantenga en 40x40 */
+        width: 40px;
         height: 40px;
-        border-radius: 50%; /* Mantén el borde redondeado */
-        flex-shrink: 0; /* Evita que se encoja */
+        border-radius: 50%;
+        flex-shrink: 0;
     }
 
     .cambios {
         width: auto;
-        flex-shrink: 1; /* Asegura que los botones no se desborden */
+        flex-shrink: 1; 
     }
     
     .noc {
-        display: none !important; /* Asegura que se oculte siempre */
+        display: none !important; 
     }
 }
 
-/* Para pantallas más pequeñas (teléfonos móviles) */
+/* Para teléfonos móviles */
 @media (max-width: 480px) {
     .menu img {
         width: 30px;
@@ -203,24 +216,24 @@ a {
         font-size: 16px;
     }
 
-    /* Cambios en el botón lupa para pantallas muy pequeñas */
+
     .buscar .lupa {
-        width: 40px;   /* Asegura que el tamaño se mantenga en 40x40 */
+        width: 40px;   
         height: 40px;
-        border-radius: 50%; /* Mantén el borde redondeado */
+        border-radius: 50%; 
     }
 
-    /* Ajustes en el micrófono para pantallas muy pequeñas */
+
     .buscar .mic {
-        width: 40px; /* Mantén el tamaño consistente */
+        width: 40px; 
         height: 40px;
-        border-radius: 50%; /* Asegura que siga siendo redondeado */
+        border-radius: 50%; 
     }
 
-    /* Asegurar que la barra de navegación no se salga hacia arriba */
+
     .bar {
         overflow: hidden;
-        position: relative; /* Mantén la barra dentro de la pantalla */
+        position: relative; 
         height: auto;
     }
 }

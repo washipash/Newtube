@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="recursos/amongus.png">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Document</title>
+    <title>NewTube</title>
 </head>
 <body>
     <nav>
@@ -22,18 +23,26 @@
                 <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/800px-YouTube_icon_%282013-2017%29.png" alt="logo" class="logo">NewTube</a>
             </div>
             <div class="buscar">
-                <input type="text" placeholder="Buscar"><button class="lupa"><img src="" alt="" id="lupa"></button>
-                <button class="mic"><img src="" alt=""></button>
-                
+                <input type="text" placeholder="Buscar">
+                <button class="lupa" id="lupa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg" alt="Buscar">
+                </button>
+                <button class="mic" id="microfono">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z"></path></svg>
+                </button>
                 <div class="noc">
                     <button class="modo" id="modo-btn"></button>
                 </div>
                 
             </div>
             <div class="cambios">
-                <button></button>
-                <button></button>
-                <button>
+                <button class="descarga" id="descarga">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><title>outlined copy</title><path d="M17 18v1H6v-1ZM6.49 9l.71.71 3.8-3.8V16h1V5.91l3.8 3.81.71-.72-5-5Z"></path></svg>
+                </button>
+                <button class="notificacion" id="notificacion">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z"></path></svg>
+                </button>
+                <button class="icono">
                     <img src="https://yt3.ggpht.com/yti/ANjgQV82wXNPvrXUXKnoYaij6qNn4XzZ3FYF7C7iD2UZACX2BO0=s88-c-k-c0x00ffffff-no-rj" alt="avatar" width="32px" height="32px" id="avatar"> 
                 </button>
             </div>
@@ -88,20 +97,19 @@
     </div>
     <div class="center">
         <div class="fila">
-            <div class="enlace">
+            <a class="enlace" href="https://www.youtube.com/watch?v=X_AUmIwWbtc&list=RDX_AUmIwWbtc&start_radio=1">
                 <img src="https://i.ytimg.com/vi/X_AUmIwWbtc/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYXiBeKF4wDw==&rs=AOn4CLDwnh8XXwf2Q9uCCOaZFvcarj84yw" alt="Imagen 1" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
-                        <i class="fas fa-play-circle"></i> <!-- Icono de Font Awesome -->
+                        <i class="fas fa-play-circle"></i> 
                     </div>
-                    <div class="textos">
+                    <div class="textos" data-title="Chop Suey (System of a Down) Jazz Cover by Robyn Adele Anderson">
                         <p class="titulo">"Chop Suey" (System of a Down) Jazz Cover by <br> Robyn Adele Anderson</p>
                         <p class="descripcion">Robyn Adele Anderson</p>
                     </div>
                 </div>
-            </div>
-            <div class="enlace">
-                <a href="https://www.youtube.com/watch?v=jy7KmriL2fI">
+            </a>
+            <a class="enlace" href="https://www.youtube.com/watch?v=jy7KmriL2fI&list=RDjy7KmriL2fI&start_radio=1">               
                 <img src="https://i.ytimg.com/vi/jy7KmriL2fI/hqdefault.jpg?sqp=-oaymwEjCOADEI4CSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDHR190v3W_4gmuiIP9CyWxff-dJQ" alt="Imagen 2" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
@@ -112,10 +120,8 @@
                         <p class="descripcion">Jorge Torres</p>
                     </div>
                 </div>
-                </a>
-            </div>
-            <div class="enlace">
-                <a href="https://www.youtube.com/watch?v=aM4QzQhVzNg&t=49s">
+            </a>
+            <a class="enlace" href="https://www.youtube.com/watch?v=aM4QzQhVzNg&t=226s">                
                 <img src="https://i.ytimg.com/vi/aM4QzQhVzNg/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDArKg5PnkF0V2BWm2CwJsatrsfiA" alt="Imagen 3" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
@@ -125,11 +131,9 @@
                         <p class="titulo">Jake el perro te lee La Divina Comedia para dormir (cover IA) (ASMR)</p>
                         <p class="descripcion">doodnood</p>
                     </div>
-                </div>
-                </a>
-            </div>
-            <div class="enlace">
-                <a href="https://www.youtube.com/watch?v=AawLM81gIHo">
+                </div>               
+            </a>
+            <a class="enlace" href="https://www.youtube.com/watch?v=AawLM81gIHo&list=PLGYCEnuqBgPwn2JTcuPnmHsztjUFRynOG">                
                 <img src="https://i.ytimg.com/vi/AawLM81gIHo/hqdefault.jpg?sqp=-oaymwEjCOADEI4CSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAvmDL3qlUmVrRkzHIgh1tMj2A2CA" alt="Imagen 4" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
@@ -139,13 +143,10 @@
                         <p class="titulo">playlist para estudiar como un filósofo medieval que tiene la verdad revelada por la gracia divina de Filosofia Acadêmica 10.359.004 visualizaciones hace 3 años 7 horas y 41 minutos</p>
                         <p class="descripcion">Filosofia Acadêmica</p>
                     </div>
-                </div>
-                </a>
-            </div>
-    
+                </div>                
+            </a>    
         <div class="fila">
-            <div class="enlace">
-                <a href="https://www.youtube.com/watch?v=T3Ayv9_SMSY">
+            <a class="enlace" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">               
                 <img src="https://i.ytimg.com/vi/T3Ayv9_SMSY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBz4PkbVWVaC48NVgQTU8JooxeInA" alt="Imagen 5" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
@@ -155,11 +156,9 @@
                         <p class="titulo">El mas grande troll de la galaxia - Trazyn el infinito | Warhammer 40k Lore</p>
                         <p class="descripcion">3Huntle0</p>
                     </div>
-                </div>
-                </a>
-            </div>
-            <div class="enlace">
-                <a href="https://www.youtube.com/watch?v=84q83skr_tk">
+                </div>             
+            </a>
+            <a class="enlace" href="https://www.youtube.com/watch?v=84q83skr_tk">               
                 <img src="https://i.ytimg.com/vi/84q83skr_tk/hq720.jpg?sqp=-oaymwExCNAFEJQDSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYVyAgKH8wDw==&rs=AOn4CLCIPwmZgst59LCopYF7nNcpSIZGsA" alt="Imagen 6" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
@@ -169,11 +168,9 @@
                         <p class="titulo">Hotline Miami Soundtrack ~ Hydrogen</p>
                         <p class="descripcion">Storm Sountracks</p>
                     </div>
-                </div>
-                </a>
-            </div>
-            <div class="enlace">
-                <a href="https://www.youtube.com/watch?v=Goz7vkeWCbU&list=RDGoz7vkeWCbU&start_radio=1">
+                </div>               
+            </a>
+            <a class="enlace" href="https://www.youtube.com/watch?v=Goz7vkeWCbU">                
                 <img src="https://i.ytimg.com/vi/Goz7vkeWCbU/hq720.jpg?sqp=-oaymwExCNAFEJQDSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYfyAbKBMwDw==&rs=AOn4CLDuIhJnDo9QP-8HYxwXSGnI7s4iKA" alt="Imagen 7" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
@@ -183,11 +180,10 @@
                         <p class="titulo">Eminem (feat. Canserbero) - Sing For The Moment (Remix)</p>
                         <p class="descripcion">Leo_Frixi</p>
                     </div>
-                </div>
-                </a>
-            </div>
-            <div class="enlace">
-                <a href="https://www.youtube.com/watch?v=qfUQ2G3ObdE">
+                </div>              
+            </a>
+            
+            <a class="enlace" href="https://www.youtube.com/watch?v=qfUQ2G3ObdE"> 
                 <img src="https://i.ytimg.com/vi/qfUQ2G3ObdE/hqdefault.jpg?sqp=-oaymwE9COADEI4CSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AeYCgALqAooCDAgAEAEYfyAbKC8wDw==&rs=AOn4CLCaHXFAyVMNZ54GSy9IN_M8gD1GiA" alt="Imagen 8" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
@@ -198,61 +194,59 @@
                         <p class="descripcion">MAURIRUFFI</p>
                     </div>
                 </div>
-                </a>
-            </div>
+            </a>
         </div>
     
         <!-- Shorts de YouTube -->
         <div class="fila shorts">
-            <div class="enlace">
-                <img src="https://via.placeholder.com/150" alt="Short 1" class="imagen">
+            <a class="enlace_short" href="https://www.youtube.com/shorts/RZ_ZL7M5EWk">
+                <img src="https://i.ytimg.com/vi/RZ_ZL7M5EWk/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLDHrbQHSYBZaDGeZ2M8M8UTEtYQ5A" alt="Short 1" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="textos">
-                        <p class="titulo">Short 1</p>
-                        <p class="descripcion">Descripción corta del short 1.</p>
+                        <p class="titulo">Final JJK 🗿#jujutsukaisen #jjk #manga #fandom #otaku #itadoriyuuji #gojousatoru #sukuna #spoilers, 118 mil visualizaciones</p>
                     </div>
                 </div>
-            </div>
-            <div class="enlace">
-                <img src="https://via.placeholder.com/150" alt="Short 2" class="imagen">
+            </a>
+            <a class="enlace_short" href="https://www.youtube.com/shorts/fHRDjxeq_Ik">
+                <img src="https://i.ytimg.com/vi/fHRDjxeq_Ik/oar2.jpg?sqp=-oaymwEYCOwDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLBlV9BFOXu1d9gC0qLJPue5TwmY7g" alt="Short 2" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="textos">
-                        <p class="titulo">Short 2</p>
-                        <p class="descripcion">Descripción corta del short 2.</p>
+                        <p class="titulo">Mientras mas chicoz son mas inteligentes se vuelven</p>
                     </div>
                 </div>
-            </div>
-            <div class="enlace">
-                <img src="https://via.placeholder.com/150" alt="Short 3" class="imagen">
+            </a>
+            <a class="enlace_short" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img src="https://i.ytimg.com/vi/HPABi4vY9dY/oar2.jpg?sqp=-oaymwEYCOwDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLAib0FvE8IqCoT2UhvUXDrb88Kilg" alt="Short 3" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="textos">
-                        <p class="titulo">Short 3</p>
-                        <p class="descripcion">Descripción corta del short 3.</p>
+                        <p class="titulo">Ahora si, de verdad... EL PEOR JUEGO DEL 2023, 195 mil visualizaciones</p>
+
                     </div>
                 </div>
-            </div>
-            <div class="enlace">
-                <img src="https://via.placeholder.com/150" alt="Short 4" class="imagen">
+            </a>
+            <a class="enlace_short" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img src="https://i.ytimg.com/vi/nOFMVgMfZ0c/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLDijU-XPLgCic7vw-uG-5NDnHxhhg" alt="Short 4" class="imagen">
                 <div class="info">
                     <div class="icono-columna">
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="textos">
-                        <p class="titulo">Short 4</p>
-                        <p class="descripcion">Descripción corta del short 4.</p>
+                        <p class="titulo">Nacen con un solo ojo. #curiosidades #supervivencia #sabiasque</p>
+
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
+
     </div>
     <script>
       
@@ -289,12 +283,12 @@
             }
         }
         
-        // Seleccionar todos los elementos con la clase .titulo
+        // Seleccionar todos los elementos 
         const titulos = document.querySelectorAll('.titulo');
         
-        // Aplicar el truncado a cada título
+        // Aplicar a cada título
         titulos.forEach(function(titulo) {
-            truncateText(titulo, 100); // Ajustar 100 al número de caracteres que quieras mostrar
+            truncateText(titulo, 100); 
         });
     </script>
 </body>

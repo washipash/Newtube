@@ -11,7 +11,7 @@ h1, p {
   text-align: center;
 }
 
-/* Estilos del contenedor y el botón */
+
 .noc {
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ h1, p {
   transition: background-color 0.5s;
 }
 
-/* Pseudo-elemento del botón para crear la animación */
+/*  animación */
 .modo::before {
   content: '';
   position: absolute;
@@ -111,18 +111,53 @@ body.dark-mode .modo {
 }
 
 body.dark-mode .enlace {
-  background-color: #333; /* Fondo oscuro para el enlace en modo nocturno */
-  color: white; /* Texto claro en modo nocturno */
+  background-color: #333; 
+  color: white; 
 }
 
-/* Si necesitas cambiar el color del texto dentro de la clase .enlace */
+body.dark-mode .enlace_short {
+  background-color: #333; 
+  color: white; 
+}
+
 body.dark-mode .enlace .titulo,
 body.dark-mode .enlace .descripcion {
-  color: white; /* Asegúrate de que el texto sea claro en modo nocturno */
+  color: white; 
+}
+
+body.dark-mode .enlace_short .titulo,
+body.dark-mode .enlace_short .descripcion {
+  color: white; 
 }
 
 .enlace {
-  background-color: white; /* Fondo claro en modo normal */
-  color: black; /* Texto oscuro en modo normal */
-  transition: background-color 0.5s, color 0.5s; /* Transiciones suaves para modo nocturno */
+  background-color: white; 
+  color: black; 
+  transition: background-color 0.5s, color 0.5s; 
+}
+
+.enlace_short {
+  background-color: white; 
+  color: black; 
+  transition: background-color 0.5s, color 0.5s; 
+}
+
+
+body.modo-nocturno {
+  background-color: #121212; 
+}
+
+body.modo-nocturno .icono {
+  filter: invert(1); 
+}
+
+.modo-nocturno button {
+  color: white;
+}
+
+body.dark-mode .buscar img,
+body.dark-mode .menu img,
+body.dark-mode .buscar svg,
+body.dark-mode .cambios svg {
+    filter: invert(100%);
 }
